@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+
+    <!-- ============================================================ -->
+    <!--   SoleKraft Footwear — Company & Store Bootstrap Data        -->
+    <!-- ============================================================ -->
+
+    <Party      partyId="SOLEKRAFT"    partyTypeId="PARTY_GROUP"/>
+    <PartyGroup partyId="SOLEKRAFT"
+                groupName="SoleKraft Footwear Pvt. Ltd."
+                logoImageUrl="/resources/uploads/images/solekraft_logo.png"/>
+
+    <PartyRole partyId="SOLEKRAFT" roleTypeId="INTERNAL_ORGANIZATIO"/>
+    <PartyRole partyId="SOLEKRAFT" roleTypeId="BILL_FROM_VENDOR"/>
+    <PartyRole partyId="SOLEKRAFT" roleTypeId="SHIP_FROM_VENDOR"/>
+    <PartyRole partyId="SOLEKRAFT" roleTypeId="BILL_TO_CUSTOMER"/>
+    <PartyRole partyId="SOLEKRAFT" roleTypeId="SUPPLIER"/>
+    <PartyRole partyId="SOLEKRAFT" roleTypeId="SUPPLIER_AGENT"/>
+    <PartyRole partyId="SOLEKRAFT" roleTypeId="VENDOR"/>
+
+    <ProductStoreGroup productStoreGroupId="SKF_SG_IN"
+                       productStoreGroupName="SoleKraft India Store Group"
+                       description="Umbrella store group covering all SoleKraft retail channels across India"/>
+
+    <ProductStore productStoreId="SKF_STORE"
+                  primaryStoreGroupId="SKF_SG_IN"
+                  storeName="SoleKraft Online Store"
+                  payToPartyId="SOLEKRAFT"
+                  reserveInventory="Y"
+                  defaultLocaleString="en_IN"
+                  defaultCurrencyUomId="INR"
+                  defaultSalesChannelEnumId="WEB_SALES_CHANNEL"
+                  autoApproveInvoice="Y"
+                  autoApproveOrder="Y"/>
+
+    <ProductStoreCatalog productStoreId="SKF_STORE"
+                         prodCatalogId="SKF_MAIN_CAT"
+                         fromDate="2026-05-01 00:00:00.0"
+                         sequenceNum="1"/>
+
+</entity-engine-xml>
