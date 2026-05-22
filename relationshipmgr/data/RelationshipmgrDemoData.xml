@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the LICENSE is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<entity-engine-xml>
+
+    <!-- Party Data -->
+
+    <!-- College Organization - SGSITS -->
+    <RmParty partyId="SGSITS" partyTypeId="ORGANIZATION"/>
+    <RmOrganization partyId="SGSITS" organizationName="Shri Govindram Seksaria Institute of Technology and Science"/>
+    <RmPartyRole partyId="SGSITS" roleTypeId="INTERNAL_ORGANIZATIO"/>
+
+    <!-- Student 1 -->
+    <RmParty partyId="STUDENT_1" partyTypeId="PERSON"/>
+    <RmPerson partyId="STUDENT_1" firstName="Amogh" lastName="Parmar" birthDate="2004-11-30"/>
+    <RmPartyRole partyId="STUDENT_1" roleTypeId="STUDENT"/>
+
+    <!-- Manager -->
+    <RmParty partyId="EMPLOYEE_MGR_1" partyTypeId="PERSON"/>
+    <RmPerson partyId="EMPLOYEE_MGR_1" firstName="RK" lastName="Solanki" birthDate="1975-03-10"/>
+    <RmPartyRole partyId="EMPLOYEE_MGR_1" roleTypeId="HOD"/>
+
+    <!-- Professor 1 -->
+    <RmParty partyId="PROFESSOR_1" partyTypeId="PERSON"/>
+    <RmPerson partyId="PROFESSOR_1" firstName="DS" lastName="Ajnar" birthDate="1978-06-20"/>
+    <RmPartyRole partyId="PROFESSOR_1" roleTypeId="PROFESSOR"/>
+
+    <!-- Contact Mechanism Data -->
+
+    <!-- Student Email -->
+    <RmContactMech contactMechId="CM_EMAIL_1" contactMechTypeId="EMAIL_ADDRESS" infoString="amogh.parmar@sgsits.ac.in"/>
+    <RmPartyContactMech partyId="STUDENT_1" contactMechId="CM_EMAIL_1" fromDate="2023-08-01 00:00:00.0"/>
+
+    <!-- Student Phone -->
+    <RmContactMech contactMechId="CM_PHONE_1" contactMechTypeId="TELECOM_NUMBER" infoString="+91-9876543210"/>
+    <RmPartyContactMech partyId="STUDENT_1" contactMechId="CM_PHONE_1" fromDate="2023-08-01 00:00:00.0"/>
+
+    <!-- Professor Address -->
+    <RmContactMech contactMechId="CM_ADDR_1" contactMechTypeId="POSTAL_ADDRESS"/>
+    <RmPostalAddress contactMechId="CM_ADDR_1" address1="23 Sudama Nagar" city="Indore" postalCode="452009"/>
+    <RmPartyContactMech partyId="PROFESSOR_1" contactMechId="CM_ADDR_1" fromDate="2020-08-01 00:00:00.0"/>
+
+    <!-- College Address -->
+    <RmContactMech contactMechId="CM_ADDR_SGSITS" contactMechTypeId="POSTAL_ADDRESS"/>
+    <RmPostalAddress contactMechId="CM_ADDR_SGSITS" address1="Park Road, Indore" city="Indore" postalCode="452003"/>
+    <RmPartyContactMech partyId="SGSITS" contactMechId="CM_ADDR_SGSITS" fromDate="2000-01-01 00:00:00.0"/>
+
+</entity-engine-xml>
