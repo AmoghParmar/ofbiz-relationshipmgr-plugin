@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-engine-xml>
+
+    <!-- Catalog Definition -->
+    <ProdCatalog prodCatalogId="SKF_MAIN_CAT" catalogName="SoleKraft Main Catalog"/>
+
+    <!-- Root Category -->
+    <ProductCategory productCategoryId="SKF_ROOT"       productCategoryTypeId="CATALOG_CATEGORY" categoryName="All Footwear"/>
+
+    <!-- Level 1 Categories -->
+    <ProductCategory productCategoryId="SKF_ETHNIC"     productCategoryTypeId="CATALOG_CATEGORY" categoryName="Ethnic Footwear"/>
+    <ProductCategory productCategoryId="SKF_CASUAL"     productCategoryTypeId="CATALOG_CATEGORY" categoryName="Casual Footwear"/>
+
+    <!-- Level 2 Sub-Categories -->
+    <ProductCategory productCategoryId="SKF_KOLHAPURI"  productCategoryTypeId="CATALOG_CATEGORY" categoryName="Kolhapuri Chappals"/>
+    <ProductCategory productCategoryId="SKF_FLIPFLOPS"  productCategoryTypeId="CATALOG_CATEGORY" categoryName="Flip Flops"/>
+
+    <!-- Promotions Category -->
+    <ProductCategory productCategoryId="SKF_OFFERS"     productCategoryTypeId="CATALOG_CATEGORY" categoryName="Seasonal Offers"/>
+
+    <ProductCategoryRollup productCategoryId="SKF_ETHNIC"    parentProductCategoryId="SKF_ROOT"    fromDate="2026-05-01 00:00:00.0"/>
+    <ProductCategoryRollup productCategoryId="SKF_CASUAL"    parentProductCategoryId="SKF_ROOT"    fromDate="2026-05-01 00:00:00.0"/>
+    <ProductCategoryRollup productCategoryId="SKF_KOLHAPURI" parentProductCategoryId="SKF_ETHNIC"  fromDate="2026-05-01 00:00:00.0"/>
+    <ProductCategoryRollup productCategoryId="SKF_FLIPFLOPS" parentProductCategoryId="SKF_CASUAL"  fromDate="2026-05-01 00:00:00.0"/>
+    <ProductCategoryRollup productCategoryId="SKF_OFFERS"    parentProductCategoryId="SKF_ROOT"    fromDate="2026-05-01 00:00:00.0"/>
+
+    <ProdCatalogCategory prodCatalogId="SKF_MAIN_CAT" productCategoryId="SKF_ROOT"   prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT"  fromDate="2026-05-01 00:00:00.0"/>
+    <ProdCatalogCategory prodCatalogId="SKF_MAIN_CAT" productCategoryId="SKF_OFFERS" prodCatalogCategoryTypeId="PCCT_PROMOTIONS"   fromDate="2026-05-01 00:00:00.0"/>
+
+    <ProductFeatureCategory productFeatureCategoryId="SKF_FC_SIZE"     description="Chappal Size (UK)"/>
+    <ProductFeatureCategory productFeatureCategoryId="SKF_FC_COLOR"    description="Chappal Color"/>
+    <ProductFeatureCategory productFeatureCategoryId="SKF_FC_MATERIAL" description="Sole Material"/>
+
+    <!-- Size Features -->
+    <ProductFeature productFeatureId="SKF_SZ_06" productFeatureTypeId="SIZE" productFeatureCategoryId="SKF_FC_SIZE" description="UK Size 6"/>
+    <ProductFeature productFeatureId="SKF_SZ_07" productFeatureTypeId="SIZE" productFeatureCategoryId="SKF_FC_SIZE" description="UK Size 7"/>
+    <ProductFeature productFeatureId="SKF_SZ_08" productFeatureTypeId="SIZE" productFeatureCategoryId="SKF_FC_SIZE" description="UK Size 8"/>
+    <ProductFeature productFeatureId="SKF_SZ_09" productFeatureTypeId="SIZE" productFeatureCategoryId="SKF_FC_SIZE" description="UK Size 9"/>
+
+    <!-- Color Features -->
+    <ProductFeature productFeatureId="SKF_CLR_TAN" productFeatureTypeId="COLOR" productFeatureCategoryId="SKF_FC_COLOR" description="Tan Brown"/>
+    <ProductFeature productFeatureId="SKF_CLR_BLK" productFeatureTypeId="COLOR" productFeatureCategoryId="SKF_FC_COLOR" description="Midnight Black"/>
+    <ProductFeature productFeatureId="SKF_CLR_RED" productFeatureTypeId="COLOR" productFeatureCategoryId="SKF_FC_COLOR" description="Maroon Red"/>
+
+    <!-- Material Features -->
+    <ProductFeature productFeatureId="SKF_MAT_LTHR" productFeatureTypeId="OTHER_FEATURE" productFeatureCategoryId="SKF_FC_MATERIAL" description="Genuine Leather Sole"/>
+    <ProductFeature productFeatureId="SKF_MAT_EVA"  productFeatureTypeId="OTHER_FEATURE" productFeatureCategoryId="SKF_FC_MATERIAL" description="EVA Foam Sole"/>
+
+    <Product productId="KP-001" productTypeId="GOOD" isVirtual="Y" isVariant="N"
+             internalName="Kolhapuri Classic - Handcrafted Ethnic Chappal" brandName="SoleKraft"
+             description="Traditional Kolhapuri chappal crafted from full-grain tan leather with decorative hand-stitching."/>
+    <ProductCategoryMember productCategoryId="SKF_KOLHAPURI" productId="KP-001" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductCategoryMember productCategoryId="SKF_OFFERS"    productId="KP-001" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001" productFeatureId="SKF_SZ_07"    productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001" productFeatureId="SKF_SZ_08"    productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001" productFeatureId="SKF_SZ_09"    productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001" productFeatureId="SKF_CLR_TAN"  productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001" productFeatureId="SKF_CLR_RED"  productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001" productFeatureId="SKF_MAT_LTHR" productFeatureApplTypeId="DISTINGUISHING_FEAT" fromDate="2026-05-01 00:00:00.0"/>
+
+    <!-- Variant 1: KP-001-TAN-7 -->
+    <Product productId="KP-001-TAN-7" productTypeId="GOOD" isVirtual="N" isVariant="Y"
+             internalName="Kolhapuri Classic Tan Size 7" brandName="SoleKraft"/>
+    <ProductAssoc productId="KP-001" productIdTo="KP-001-TAN-7" productAssocTypeId="PRODUCT_VARIANT" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001-TAN-7" productFeatureId="SKF_SZ_07"    productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001-TAN-7" productFeatureId="SKF_CLR_TAN"  productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001-TAN-7" productFeatureId="SKF_MAT_LTHR" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+
+    <!-- Variant 2: KP-001-TAN-8 -->
+    <Product productId="KP-001-TAN-8" productTypeId="GOOD" isVirtual="N" isVariant="Y"
+             internalName="Kolhapuri Classic Tan Size 8" brandName="SoleKraft"/>
+    <ProductAssoc productId="KP-001" productIdTo="KP-001-TAN-8" productAssocTypeId="PRODUCT_VARIANT" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001-TAN-8" productFeatureId="SKF_SZ_08"    productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001-TAN-8" productFeatureId="SKF_CLR_TAN"  productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001-TAN-8" productFeatureId="SKF_MAT_LTHR" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+
+    <!-- Variant 3: KP-001-RED-8 -->
+    <Product productId="KP-001-RED-8" productTypeId="GOOD" isVirtual="N" isVariant="Y"
+             internalName="Kolhapuri Classic Maroon Size 8" brandName="SoleKraft"/>
+    <ProductAssoc productId="KP-001" productIdTo="KP-001-RED-8" productAssocTypeId="PRODUCT_VARIANT" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001-RED-8" productFeatureId="SKF_SZ_08"    productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001-RED-8" productFeatureId="SKF_CLR_RED"  productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="KP-001-RED-8" productFeatureId="SKF_MAT_LTHR" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+
+    <Product productId="FF-002" productTypeId="GOOD" isVirtual="Y" isVariant="N"
+             internalName="EasySole Flip Flop - Casual Daily Wear" brandName="SoleKraft"
+             description="Lightweight EVA foam flip flop designed for all-day comfort. Available in multiple colors and sizes."/>
+    <ProductCategoryMember productCategoryId="SKF_FLIPFLOPS" productId="FF-002" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductCategoryMember productCategoryId="SKF_OFFERS"    productId="FF-002" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002" productFeatureId="SKF_SZ_06"   productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002" productFeatureId="SKF_SZ_07"   productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002" productFeatureId="SKF_CLR_BLK" productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002" productFeatureId="SKF_CLR_RED" productFeatureApplTypeId="SELECTABLE_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002" productFeatureId="SKF_MAT_EVA" productFeatureApplTypeId="DISTINGUISHING_FEAT" fromDate="2026-05-01 00:00:00.0"/>
+
+    <!-- Variant 1: FF-002-BLK-6 -->
+    <Product productId="FF-002-BLK-6" productTypeId="GOOD" isVirtual="N" isVariant="Y"
+             internalName="EasySole Flip Flop Black Size 6" brandName="SoleKraft"/>
+    <ProductAssoc productId="FF-002" productIdTo="FF-002-BLK-6" productAssocTypeId="PRODUCT_VARIANT" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002-BLK-6" productFeatureId="SKF_SZ_06"   productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002-BLK-6" productFeatureId="SKF_CLR_BLK" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002-BLK-6" productFeatureId="SKF_MAT_EVA" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+
+    <!-- Variant 2: FF-002-BLK-7 -->
+    <Product productId="FF-002-BLK-7" productTypeId="GOOD" isVirtual="N" isVariant="Y"
+             internalName="EasySole Flip Flop Black Size 7" brandName="SoleKraft"/>
+    <ProductAssoc productId="FF-002" productIdTo="FF-002-BLK-7" productAssocTypeId="PRODUCT_VARIANT" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002-BLK-7" productFeatureId="SKF_SZ_07"   productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002-BLK-7" productFeatureId="SKF_CLR_BLK" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+    <ProductFeatureAppl productId="FF-002-BLK-7" productFeatureId="SKF_MAT_EVA" productFeatureApplTypeId="STANDARD_FEATURE" fromDate="2026-05-01 00:00:00.0"/>
+
+    <ProductPromo productPromoId="SKF_SUMMER26" promoName="SoleKraft Summer Sale 2026" userEntered="Y" showToCustomer="Y" requireCode="N"/>
+    <ProductPromoRule productPromoId="SKF_SUMMER26" productPromoRuleId="01" ruleName="Summer Flat Discount Rule"/>
+    <ProductPromoCond productPromoId="SKF_SUMMER26" productPromoRuleId="01" productPromoCondSeqId="01"
+                      inputParamEnumId="PPIP_PRODUCT_QUANT" operatorEnumId="PPC_EQ" condValue="1"/>
+    <ProductPromoAction productPromoId="SKF_SUMMER26" productPromoRuleId="01" productPromoActionSeqId="01"
+                        productPromoActionEnumId="PROMO_PROD_DISC" amount="15"/>
+    <ProductPromoCategory productPromoId="SKF_SUMMER26" productPromoRuleId="01" productPromoActionSeqId="01"
+                          productPromoCondSeqId="_NA_" productCategoryId="SKF_OFFERS"
+                          andGroupId="_NA_" productPromoApplEnumId="PPPA_INCLUDE"/>
+
+</entity-engine-xml>
